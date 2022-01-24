@@ -51,7 +51,7 @@ debugFileLength: int
     #  - COM10 as the serial port
     #  - output_file as debug file stream
     #  - debugFileLength of zero indicating no circular logging
-    MatesController mates = MatesController("COM10", resetFunction=resetModule,debugStream=output_file, debugFileLength=0) 
+    MatesController mates = MatesController("COM10", debugStream=output_file, debugFileLength=0) 
 
 **Note:** _If a debug file is specified, it should be opened using either 'w+' or 'r+' before running the begin() function of this library._
 <br/>
