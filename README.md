@@ -21,7 +21,7 @@ This library can be installed from the Python Packaging Index by running the com
 
 ### Constructor
 
-#### ***MatesController(portName, resetFunction, debugStream, debugFileLength)***
+#### ***MatesController(portName, debugStream, debugFileLength)***
 
 Constructs all the necessary attributes associated with an instance
 of a Mates Controller Object.
@@ -31,10 +31,6 @@ of a Mates Controller Object.
 portName: str
 
 - the name of the port to be opened. Example: /dev/ttyUSB0 for linux.
-
-resetFunction:
-
-- function used to perform a hard reset.
 
 debugStream: io.TextIOWrapper
 
@@ -53,16 +49,8 @@ debugFileLength: int
 ##### Example No. 2:
     # Creates a new instance named 'mates' which utilizes: 
     #  - COM10 as the serial port
-    #  - resetModule as the reset function
     #  - output_file as debug file stream
     #  - debugFileLength of zero indicating no circular logging
-
-    def resetModule():
-        // perform reset of 100ms pulse to the RST pin
-        //  set reset pulse
-        //  wait for 100ms
-        //  unset reset pulse
-
     MatesController mates = MatesController("COM10", resetFunction=resetModule,debugStream=output_file, debugFileLength=0) 
 
 **Note:** _If a debug file is specified, it should be opened using either 'w+' or 'r+' before running the begin() function of this library._
