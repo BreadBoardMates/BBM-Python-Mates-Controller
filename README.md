@@ -1,4 +1,4 @@
-![image](logo.png)
+![image](https://raw.githubusercontent.com/BreadBoardMates/BBM-Python-Mates-Controller/main/logo.png)
 
 
 # BBM Python Mates Controller Library
